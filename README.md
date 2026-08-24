@@ -6,7 +6,7 @@ Complete source code for every chapter of the book. MIT licensed — use freely.
 
 ```
 chapter-01/     — Extension architecture notes
-chapter-02/     — Hello World: context menu + clipboard
+chapter-02/     — Hello World: context menu + clipboard (complete, loadable extension)
 chapter-03/     — Popup UI
 chapter-04/     — Keyboard shortcuts
 chapter-05/     — Custom cleanup rules (chrome.storage)

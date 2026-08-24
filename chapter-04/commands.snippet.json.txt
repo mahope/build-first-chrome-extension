@@ -1,0 +1,9 @@
+"commands": {
+  "copy-selection": {
+    "suggested_key": {
+      "default": "Alt+C",
+      "mac": "MacCtrl+C"
+    },
+    "description": "Copy selected text as Markdown"
+  }
+}

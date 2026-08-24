@@ -1,0 +1,35 @@
+{
+
+  "manifest_version": 3,
+  "name": "Your Extension Name",
+  "version": "1.0.0",
+
+  "description": "What your extension does in one sentence.",
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Tooltip text"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "permissions": ["activeTab", "storage", "contextMenus", "clipboardWrite", "scripting", "offscreen"],
+  "commands": {
+    "my-command": {
+      "suggested_key": { "default": "Alt+Shift+1" },
+      "description": "Run my command"
+    }
+  },
+
+  "host_permissions": ["https://*/*"],
+  "content_scripts": [{
+    "matches": ["https://*/*"],
+    "js": ["content.js"]
+  }]
+}

@@ -1,0 +1,4 @@
+{
+  "permissions": ["activeTab", "contextMenus", "storage", "clipboardWrite"],
+  "host_permissions": ["https://*/*"]
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<script>
+// Wait for the background to tell us what to copy
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.type === 'copy-from-storage') {
+    chrome.storage.local.get('_clipboard', (data) => {
+      if (data._clipboard) {
+        navigator.clipboard.writeText(data._clipboard).catch(console.error);
+        chrome.storage.local.remove('_clipboard');
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>
